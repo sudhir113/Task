@@ -1,0 +1,111 @@
+{
+  "name": "product",
+  "version": "1.0.0",
+  "description": "React+Redux+ES6",
+  "main": "webpack.config.js",
+  "author": "Product page",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --inline --content-base . --history-api-fallback --port 3000",
+    "build-dev": "rimraf ./dist && webpack-dev-server --config webpack.dev.config.js",
+    "build": "rimraf ./dist && webpack --config webpack.build.js",
+    "dev": "webpack -d --watch",
+    "start2": "webpack-dev-server --watch",
+    "prod": "npm run clean && webpack -p",
+    "clean": "rimraf ./dist/*",
+    "test": "jest",
+    "lint": "eslint --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty . *.js",
+    "rule": "npm run lint"
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "es6",
+    "webpack"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.8",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-plugin-compat": "^0.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "html-webpack-plugin": "^2.28.0",
+    "http-server": "^0.9.0",
+    "image-webpack-loader": "^3.3.0",
+    "jest": "^22.0.6",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-hot-loader": "^3.0.0-beta.2",
+    "react-test-renderer": "^16.2.0",
+    "regenerator-runtime": "^0.10.5",
+    "resolve-url-loader": "^2.0.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.5.8",
+    "validatorjs": "^3.13.3",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bootstrap": "^4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.7.2",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "reactstrap": "^5.0.0",
+    "redux": "^3.7.2",
+    "redux-form": "^7.2.0",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "jsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!react)/"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test/setup.js",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
+  }
+}
